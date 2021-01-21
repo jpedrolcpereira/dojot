@@ -57,7 +57,7 @@
       "app/**/*.js",
       "!index.js"
     ],
-    "coverageDirectory": "coverage/",
+    "coverageDirectory": "./coverage/",
     "coverageThreshold": {
       "global": {
         "branches": 80,
