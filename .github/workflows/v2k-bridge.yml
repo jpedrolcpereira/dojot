@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [10.x]
     steps:
 
     - name: checkout
@@ -35,7 +35,7 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
       with:
-        directory: connector/mqtt/vernemq/v2k-bridge/coverage
+        file: connector/mqtt/vernemq/v2k-bridge/coverage/lcov.info # create when run npm run coverage
         flags: V2KBridge # Flags allow you to isolate coverage reports for different tests
         name: v2k-bridge # Custom defined name for the upload
 
